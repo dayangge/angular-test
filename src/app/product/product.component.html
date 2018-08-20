@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="form-group">
+      <input class="form-control" placeholder="请输入" [formControl]="titleFilter">
+    </div>
+  </div>
+</div>
+<div *ngFor="let item of products | filter:'title':keyword" class="col-md-4 col-lg-4 col-sm-4">
+  <div class="thumbnail">
+    <img src="http://placeholder.qiniudn.com/320x150/4CD964/fff" alt="">
+    <div class="caption">
+      <h4 class="pull-right">{{item.price}}</h4>
+      <h4><a [routerLink]="['./product', item.id]">{{item.title}}</a></h4>
+      <p>{{item.desc}}</p>
+    </div>
+    <div>
+      <app-stars [rating]="item.rating"></app-stars>
+    </div>
+  </div>
+</div>

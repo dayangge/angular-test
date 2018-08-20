@@ -1,0 +1,10 @@
+.slide-iamge{
+  width: 100%;
+}
+.carousel-indicators >li{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.carousel{
+  margin-bottom: 30px;
+}
